@@ -65,7 +65,7 @@ const seed = async () => {
       current_question: 1,
     },
   });
-  for (let i = 0; i < users.length; i++) {
+  /*for (let i = 0; i < users.length; i++) {
     for (let j = 0; j < 3; j++) {
       await prisma.user_topics.upsert({
         where: { id: i + i },
@@ -76,7 +76,20 @@ const seed = async () => {
         },
       });
     }
-  }
+  }*/
+  /*for (let i = 0; i < users.length; i++) {
+    for (let j = 0; j < 3; j++) {
+      await prisma.user_topics.upsert({
+        where: { id: i * 3 + j + 1 }, // Ensuring unique id for each combination
+        update: {},
+        create: {
+          user_id: i + 1, // This assumes your user_id starts at 1 and corresponds to the i-th user
+          topic_id: j + 1, // This assumes that topic_id starts at 1 and corresponds to the j-th topic
+        },
+      });
+    }
+  }*/
+
   for (let i = 1; i < 4; i++) {
     await prisma.categories_topics.upsert({
       where: { id: i },
