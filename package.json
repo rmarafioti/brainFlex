@@ -9,9 +9,8 @@
   "scripts": {
     "dev": "nodemon ./server/index.js",
     "build": "vite build",
-    "start": "node src/server",
-    "deploy": "prisma migrate deploy && prisma db seed",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "start": "node src/server/index.js"
   },
   "prisma": {
     "schema": "src/server/prisma/schema.prisma",
