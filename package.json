@@ -7,10 +7,11 @@
     "node": ">=18.16.0"
   },
   "scripts": {
-    "dev": "nodemon ./server/index.js",
+    "dev": "nodemon src/server/index.js",
     "build": "vite build",
     "start": "node src/server",
-    "deploy": "prisma migrate deploy && prisma db seed"
+    "deploy": "prisma migrate deploy && prisma db seed",
+    "heroku-postbuild": "npm run build"
   },
   "prisma": {
     "schema": "src/server/prisma/schema.prisma",
@@ -28,7 +29,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.18.0",
+    "vite": "^4.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -39,7 +41,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "nodemon": "^3.0.1",
-    "prisma": "^5.20.0",
-    "vite": "^4.4.5"
+    "prisma": "^5.20.0"
   }
 }
