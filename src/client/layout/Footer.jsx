@@ -24,32 +24,39 @@ export default function Footer() {
     <section id="footerSection">
       <div id="footerNavElements">
         <p className="footerNavElement">
-          <Link to="/">home</Link>
+          <Link to="/" className="footerLogin">
+            home
+          </Link>
         </p>
-        {token && (<p className="footerNavElement">
-          <Link to="/account/">account</Link>
-        </p> )
-        }
+        {token && (
+          <p className="footerNavElement">
+            <Link to="/account/">account</Link>
+          </p>
+        )}
         <p className="footerNavElement">
           {token ? (
-            <li className="footerLoginElement">
+            <p className="footerLoginElement">
               <a className="footerLogin" onClick={handleLogout}>
                 log out
               </a>
-            </li>
+            </p>
           ) : (
-            <li className="footerLoginElement">
+            <p className="footerLoginElement">
               <NavLink className="footerLogin" to="/auth">
                 log in
               </NavLink>
-            </li>
+            </p>
           )}
         </p>
+        <p className="footerNavElement">
+          <Link to="howtoplay/1" id="howToPlay">
+            how to play
+          </Link>
+        </p>
       </div>
-      <Link to="howtoplay/1">
-        <h3 id="howToPlay">how to play </h3>
-      </Link>
-      <p className="creators">creators: </p>
+      <p className="creators" id="creatorsHeader">
+        Creators:{" "}
+      </p>
       <div id="creatorNames">
         <a
           className="creators"
