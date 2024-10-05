@@ -21,7 +21,7 @@ export default function Footer() {
   };
 
   return (
-    <section id="footerSection">
+    <footer id="footerSection">
       <div id="footerNavElements">
         <p className="footerNavElement">
           <Link to="/" className="footerLogin">
@@ -80,6 +80,6 @@ export default function Footer() {
           Rich Marafioti
         </a>
       </div>
-    </section>
+    </footer>
   );
 }
