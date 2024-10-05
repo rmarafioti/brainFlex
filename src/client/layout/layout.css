@@ -17,17 +17,17 @@
 
 #navBarSectionRight {
   display: flex;
+  margin-top: 1rem;
 }
 
 .navLink {
-  color: #5e80a8;
-  border: 0.1rem solid #71adf1;
+  color: white;
   border-radius: 10px;
-  background-color: rgb(239, 244, 248);
-  padding: 0.4rem;
-  margin-left: 0.5rem;
+  background-color: #5e80a8;
+  padding: .5rem 1rem .5rem 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-size: 22px;
+  font-weight: bold;
   cursor: pointer;
 }
 

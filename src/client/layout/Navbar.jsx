@@ -26,14 +26,13 @@ export default function Navbar() {
           <p id="navbarEmoji">🧠 </p>
         </NavLink>
       </div>
-      <div id="navBarSectionRight">
+      <ul id="navBarSectionRight">
         {token && (
-
           <li className="login">
-          <NavLink className="navLink" to="/account">
-            Account
-          </NavLink>
-        </li>
+            <NavLink className="navLink" to="/account">
+              Account
+            </NavLink>
+          </li>
         )}
         {token ? (
           <li className="login">
@@ -48,7 +47,7 @@ export default function Navbar() {
             </NavLink>
           </li>
         )}
-      </div>
+      </ul>
     </nav>
   );
 }
