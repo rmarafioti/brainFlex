@@ -1,53 +1,72 @@
 /* auth styling */
 
+.authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
 #loginTitle {
-  color: rgb(248, 119, 54);
-  font-size: 2.5rem;
-  margin-left: 2rem;
-  text-align: left;
+  color: rgb(229, 83, 15);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 #authForm {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .formName {
-  color: #5e80a8;
-  font-size: 1.3rem;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
+  color: #3a5068;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 0.5rem;
-  padding: 0.2rem;
-  border-radius: 10px;
+  font-size: 18px;
+  margin-top: .5rem;
+  padding: .5rem;
+  border-radius: 5px;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  width: 400px
 }
 
 #loginButton {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: #5e80a8;
-  border: 0.1rem solid #71adf1;
-  border-radius: 15px;
-  background-color: rgb(232, 238, 243);
-  padding: 0.4rem;
-  padding: 0.5rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #2082f1;
+  border: 2px solid #2082f1;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 1.5rem 0.5rem;
   border-radius: 10px;
+  width: 300px;
+  cursor: pointer;
 }
 
 #bottomMessage {
-  color: #5e80a8;
-  margin-left: 2rem;
+  color: #3a5068;
+  font-size: 18px;
 }
 
 #waitMessage {
   font-family: Arial, Helvetica, sans-serif;
   color: #5e80a8;
+}
+
+@media (max-width: 555px) {
+  #loginButton, .form {
+    width: 90%;
+  }
+  .input {
+    width: 100%;
+  }
 }

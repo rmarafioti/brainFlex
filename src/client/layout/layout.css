@@ -21,13 +21,19 @@
 }
 
 .navLink {
-  color: white;
+  color:  #2082f1;
+  border: 2px solid #2082f1;
   border-radius: 10px;
-  background-color: #2082f1;
+  background-color: white;
   padding: .5rem 1rem .5rem 1rem;
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.navLink:hover {
+  color: white;
+  background-color: #2082f1;
 }
 
 .login {
@@ -42,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 #footerNavElements {
@@ -49,7 +56,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid white;
   width: 60%;
   padding-bottom: 1rem;
 }
@@ -73,39 +79,6 @@
 .footerLoginElement {
   list-style-type: none;
   margin: 0;
-}
-
-#creatorsHeader {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  margin-top: 1.5rem;
-}
-
-#creatorNames {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1rem 0rem 2rem 0rem;
-}
-
-.creators,
-.creatorsMiddle {
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 0.5rem;
-}
-
-.creators a,
-.creators a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-.creatorsMiddle {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 
 /* how to play styling */

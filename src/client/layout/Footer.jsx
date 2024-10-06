@@ -54,32 +54,6 @@ export default function Footer() {
           </Link>
         </p>
       </div>
-      <p className="creators" id="creatorsHeader">
-        Creators:{" "}
-      </p>
-      <div id="creatorNames">
-        <a
-          className="creators"
-          target="_blank"
-          href="https://www.linkedin.com/in/bravermanian/"
-        >
-          Ian Braverman
-        </a>
-        <a
-          className="creatorsMiddle"
-          target="_blank"
-          href="https://www.linkedin.com/in/kyle-cogan-268aa1a9/"
-        >
-          Kyle Cogan
-        </a>
-        <a
-          className="creators"
-          target="_blank"
-          href="https://www.linkedin.com/in/richmarafioti/"
-        >
-          Rich Marafioti
-        </a>
-      </div>
     </footer>
   );
 }
