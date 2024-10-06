@@ -10,8 +10,8 @@ export default function HowToPlay2() {
   return (
     <>
       <section className="howToPlaySection">
-        <header className="howToPlayHeader">🚀 Step 2: </header>
-        <p className="howToPlayTagline">The Quest for Clues!</p>
+        <h1 className="howToPlayHeader">🚀 Step 2: </h1>
+        <h2 className="howToPlayTagline">The Quest for Clues!</h2>
         <p className="howToPlayInstructions">
           Tackle 10 intriguing questions-answer as few or as many as you wish.
           Each correct answer sharpens the image and drops a letter into your
@@ -27,11 +27,13 @@ export default function HowToPlay2() {
         </div>
       </section>
       <section className="buttonSectionTutorial">
-        <Link to="/">
-          <button id="button">HOME</button>
+        <Link className="link" to="/howtoplay/3">
+          <button className="button">NEXT</button>
         </Link>
-        <Link to="/howtoplay/3">
-          <button id="button">NEXT</button>
+        <Link className="link" to="/">
+          <button className="button" id="howToPlayHomeButton">
+            HOME
+          </button>
         </Link>
       </section>
     </>
