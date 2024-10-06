@@ -45,9 +45,9 @@ export default function AuthForm() {
   };
 
   return (
-    <>
+    <article className="authForm">
       <h1 id="loginTitle">{authAction}</h1>
-      <form onSubmit={attemptAuth}>
+      <form className="form" onSubmit={attemptAuth}>
         <div id="authForm">
           <label className="formName">
             Name
@@ -80,8 +80,8 @@ export default function AuthForm() {
             />
           </label>
         </div>
-        <button id="loginButton">{authAction}</button>
       </form>
+      <button id="loginButton">{authAction}</button>
       <a id="bottomMessage" onClick={() => setIsLogin(!isLogin)}>
         {altCopy}
       </a>
@@ -91,6 +91,6 @@ export default function AuthForm() {
       )}
       {loginError && <p role="alert">{loginError}</p>}
       {registerError && <p role="alert">{registerError}</p>}
-    </>
+    </article>
   );
 }

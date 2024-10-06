@@ -10,8 +10,8 @@ export default function HowToPlay1() {
   return (
     <>
       <section className="howToPlaySection">
-        <header className="howToPlayHeader">🌟 Step 1: </header>
-        <p className="howToPlayTagline">Choose Your Adventure!</p>
+        <h1 className="howToPlayHeader">🌟 Step 1: </h1>
+        <h2 className="howToPlayTagline">Choose Your Adventure!</h2>
         <p className="howToPlayInstructions">
           Pick a topic and let the game begin. You’ll get a mysterious blurred
           image and a word puzzle of empty letters waiting to reveal a secret
@@ -26,11 +26,13 @@ export default function HowToPlay1() {
         </div>
       </section>
       <section className="buttonSectionTutorial">
-        <Link to="/">
-          <button id="button">HOME</button>
+        <Link className="link" to="/howtoplay/2">
+          <button className="button">NEXT</button>
         </Link>
-        <Link to="/howtoplay/2">
-          <button id="button">NEXT</button>
+        <Link className="link" to="/">
+          <button className="button" id="howToPlayHomeButton">
+            HOME
+          </button>
         </Link>
       </section>
     </>

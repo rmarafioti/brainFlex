@@ -10,8 +10,8 @@ export default function HowToPlay3() {
   return (
     <>
       <section className="howToPlaySection">
-        <header className="howToPlayHeader">✨ Step 3: </header>
-        <p className="howToPlayTagline">Crack the Code!</p>
+        <h1 className="howToPlayHeader">✨ Step 3: </h1>
+        <h2 className="howToPlayTagline">Crack the Code!</h2>
         <p className="howToPlayInstructions">
           Think you’ve got it? Smash that solve button and spell out the secret
           word to complete your quest. The fewer questions you need, the higher
@@ -26,8 +26,8 @@ export default function HowToPlay3() {
         </div>
       </section>
       <section className="buttonSectionTutorial">
-        <Link to="/">
-          <button id="button">HOME</button>
+        <Link className="link" to="/">
+          <button className="button">HOME</button>
         </Link>
       </section>
     </>
