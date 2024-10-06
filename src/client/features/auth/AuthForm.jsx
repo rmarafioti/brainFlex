@@ -80,8 +80,8 @@ export default function AuthForm() {
             />
           </label>
         </div>
+        <button id="loginButton">{authAction}</button>
       </form>
-      <button id="loginButton">{authAction}</button>
       <a id="bottomMessage" onClick={() => setIsLogin(!isLogin)}>
         {altCopy}
       </a>
