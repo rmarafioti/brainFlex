@@ -30,7 +30,9 @@ export default function Footer() {
         </p>
         {token && (
           <p className="footerNavElement">
-            <Link to="/account/">account</Link>
+            <Link className="footerLogin" to="/account/">
+              account
+            </Link>
           </p>
         )}
         <p className="footerNavElement">
