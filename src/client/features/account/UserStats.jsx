@@ -81,7 +81,7 @@ function TopicCard({ topic }) {
   };
 
   return (
-    <li>
+    <li className="topicCard">
       <p id="topicName">{topic?.name}</p>
       <form onSubmit={createQuiz}>
         <button id="playQuizButton">Play Quiz</button>
@@ -271,14 +271,16 @@ export default function UserStats() {
         return (
           <>
             <p className="quizMessage">Current Quiz Information: </p>
-            <p className="quizMessage">
-              Current Quiz Topic:{currentQuizTopic?.[0].name}
+            <p className="quizInfo">Current Quiz Topic: </p>
+            <p className="quizInfo" id="currentQuizTopic">
+              {currentQuizTopic?.[0].name}
             </p>
-            <p className="quizMessage">
+
+            <p className="quizInfo">
               Current Quiz Question:{currentQuizQuestion}
             </p>
-            <NavLink to={`/game/home`}>
-              <button id="continueQuizButton">To Continue Quiz</button>
+            <NavLink id="continueQuizButton" to={`/game/home`}>
+              To Continue Quiz
             </NavLink>
           </>
         );
@@ -299,36 +301,28 @@ export default function UserStats() {
   return (
     <>
       <article id="userStats">
-        <section>
-          <div id="userCard">
-            <h3 id="userCardHeadline">Welcome {me?.name}!</h3>
-            <p id="userCardItem">Username: {me?.username}</p>
-            <p id="userCardItem">Aggregate Score: {me?.aggregate_score}</p>
-            <p id="userCardItem">Quiz Count: {me?.quiz_count}</p>
-          </div>
+        <div id="userCard">
+          <h1 id="userCardHeadline">Welcome {me?.name}!</h1>
+          <p id="userCardItem">Username: {me?.username}</p>
+          <p id="userCardItem">Aggregate Score: {me?.aggregate_score}</p>
+          <p id="userCardItem">Quiz Count: {me?.quiz_count}</p>
+          <div>{distanceToNextRank(me?.aggregate_score)}</div>
+          <div id="displayRank">{displayRank(me?.aggregate_score)}</div>
           {showCreateContinueFinished()}
-          <div>
-            <button id="changeTopicsButton">
-              <Link to={`/topics`}>Change Topics</Link>
-            </button>
-          </div>
-        </section>
-        <section>
-          <div id="topPlayersCard">
-            <h3 id="topPlayersHeadline">Top Players:</h3>
-            <ul id="topPlayers">
-              {users?.length > 0 &&
-                [...users]
-                  .sort((a, b) => b.aggregate_score - a.aggregate_score)
-                  .slice(0, 3)
-                  .map((user) => <UserScores key={user?.id} user={user} />)}
-            </ul>
-          </div>
-          <section id="rankContainer">
-            <div>{distanceToNextRank(me?.aggregate_score)}</div>
-            <div id="displayRank">{displayRank(me?.aggregate_score)}</div>
-          </section>
-        </section>
+          <button id="changeTopicsButton">
+            <Link to={`/topics`}>Change Topics</Link>
+          </button>
+        </div>
+        <div id="topPlayersCard">
+          <h3 id="topPlayersHeadline">Top Players:</h3>
+          <ul id="topPlayers">
+            {users?.length > 0 &&
+              [...users]
+                .sort((a, b) => b.aggregate_score - a.aggregate_score)
+                .slice(0, 3)
+                .map((user) => <UserScores key={user?.id} user={user} />)}
+          </ul>
+        </div>
       </article>
     </>
   );

@@ -41,6 +41,12 @@
   list-style-type: none;
 }
 
+/*@media (max-width: 555px) {
+#navBarSectionRight {
+  display: inline-block;
+}
+}*/
+
 /* footer styling */
 
 #footerSection {
