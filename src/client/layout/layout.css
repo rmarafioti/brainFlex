@@ -22,12 +22,13 @@
 
 .navLink {
   color:  #2082f1;
-  border: 2px solid #2082f1;
   border-radius: 10px;
   background-color: white;
   padding: .5rem 1rem .5rem 1rem;
   font-size: 22px;
   font-weight: bold;
+  margin-left: .5rem;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
   cursor: pointer;
 }
 
@@ -39,6 +40,12 @@
 .login {
   list-style-type: none;
 }
+
+/*@media (max-width: 555px) {
+#navBarSectionRight {
+  display: inline-block;
+}
+}*/
 
 /* footer styling */
 
@@ -56,7 +63,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 60%;
+  flex-wrap: wrap;
   padding-bottom: 1rem;
 }
 
@@ -65,6 +72,7 @@
 .footerLoginElement, #howToPlay {
   color: white;
   font-size: 20px;
+  padding: 0rem .5rem 0rem .5rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
