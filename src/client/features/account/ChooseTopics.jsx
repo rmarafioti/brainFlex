@@ -59,7 +59,7 @@ export default function ChooseTopics() {
    */
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
-      <section id="categoryCard">
+      <>
         <h3 id="categoryName">{category.name}</h3>
         <ul id="checkBoxContainer">
           {category.Category_topics.map(({ topic }) => (
@@ -77,31 +77,30 @@ export default function ChooseTopics() {
             </li>
           ))}
         </ul>
-      </section>
+      </>
     );
   }
 
   return (
-    <>
-      <header id="chooseTopicsHeadline">Favorite Quiz Topics:</header>
+    <article className="chooseTopicsPage">
+      <h1 id="chooseTopicsHeadline">Favorite Quiz Topics:</h1>
       <p id="chooseTopicsTag">Pick 3</p>
-      <article>
-        <ul>
-          {categories?.map((category) => (
-            <CategoryItem
-              key={category.id}
-              category={category}
-              onCheckboxChange={handleCheckChange}
-              selectedTopics={selectedTopics}
-            />
-          ))}
-        </ul>
-        <div id="buttonSection">
-          <button id="submitTopicsButton" onClick={handleSumbit}>
-            <Link to={`/account/`}>Submit Topics</Link>
-          </button>
-        </div>
-      </article>
-    </>
+      <div className="categoryItemContainer">
+        {categories?.map((category) => (
+          <CategoryItem
+            id="categoryCard"
+            key={category.id}
+            category={category}
+            onCheckboxChange={handleCheckChange}
+            selectedTopics={selectedTopics}
+          />
+        ))}
+      </div>
+      <div id="buttonSection">
+        <button id="submitTopicsButton" onClick={handleSumbit}>
+          <Link to={`/account/`}>Submit Topics</Link>
+        </button>
+      </div>
+    </article>
   );
 }

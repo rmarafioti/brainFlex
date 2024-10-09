@@ -94,12 +94,17 @@
 
 /* choose topics styling */
 
+.chooseTopicsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #chooseTopicsHeadline,
 #pickQuizHeadline {
   color: rgb(248, 119, 54);
   font-size: 2rem;
-  margin-left: 1rem;
-  text-align: left;
 }
 
 #chooseTopicsTag,
@@ -110,6 +115,21 @@
   font-size: 1.4rem;
   text-align: left;
   margin-left: 1rem;
+}
+
+.categoryItemContainer {
+  display: flex;
+  flex-direction: column;
+  color: #5e80a8;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  width: 480px;
 }
 
 #categoryCard,
