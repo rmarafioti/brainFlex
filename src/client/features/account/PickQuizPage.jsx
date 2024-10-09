@@ -154,12 +154,16 @@ export default function PickQuizPage() {
         return (
           <>
             <p className="quizMessage">Current Quiz Information: </p>
-            <p className="quizMessage">
-              Current Quiz Topic:{currentQuizTopic?.[0].name}
-            </p>
-            <p className="quizMessage">
-              Current Quiz Question:{currentQuizQuestion}
-            </p>
+            <div className="quizInfo">
+              Current Quiz Topic:
+              <p className="topic">{currentQuizTopic?.[0].name}</p>
+            </div>
+            <div className="quizInfo">
+              Current Quiz Question:
+              <p className="topic" id="question">
+                {currentQuizQuestion}
+              </p>
+            </div>
             <NavLink to={`/game/home`}>
               <button id="continueQuizButton">To Continue Quiz</button>
             </NavLink>
@@ -181,12 +185,9 @@ export default function PickQuizPage() {
   };
 
   return (
-    <>
-      <header id="pickQuizHeadline">Pick Quiz Page</header>
-      <article>
-        <p id="pickQuizTag">Your Topics: </p>
-        <section id="pickQuizSection">{showCreateContinueFinished()}</section>
-      </article>
-    </>
+    <article className="pickQuizContent">
+      <h1 id="pickQuizHeadline">Pick Quiz Page</h1>
+      <section id="pickQuizSection">{showCreateContinueFinished()}</section>
+    </article>
   );
 }

@@ -344,9 +344,38 @@ border: 2px solid #2082f1;
 
 /* pick quiz page styling */
 
-#pickQuizSection {
+.pickQuizContent {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: 1rem 0rem 4rem 0rem;
+}
+
+#pickQuizHeadline {
+  font-size: 40px;
+}
+
+.topic {
+  color: #2082f1;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2rem;
+}
+
+#question {
+  margin-bottom: 0rem;
+}
+
+#pickQuizSection {
+  color: #2082f1;
+  font-family: Arial, Helvetica, sans-serif;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  width: 480px;
 }
 
 #topicCard {
@@ -368,6 +397,9 @@ border: 2px solid #2082f1;
 }
 
 @media (max-width: 555px) {
+   #pickQuizSection {
+    width: 90%;
+  }
   #homePageContainer {
     width: 100%;
   }
