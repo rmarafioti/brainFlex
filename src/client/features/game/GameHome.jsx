@@ -162,7 +162,7 @@ export default function GameHome() {
   };
 
   return (
-    <>
+    <article className="gameHome">
       <section id="currentQuestion">
         Current Question: {currentQuestion}
       </section>
@@ -170,7 +170,9 @@ export default function GameHome() {
         <img id="image" className={blurClass} src={image_word?.image_url} />
       </section>
       <section>
-        <p id="answerGridTitle">Fill in the Empty Letters to Solve</p>
+        <p id="answerGridTitle">
+          Fill in the empty letters and hit enter to solve
+        </p>
         <form id="answerGridContainer">
           <div id="answerGrid">
             {gameWord?.split("").map((letter, index) => {
@@ -209,12 +211,15 @@ export default function GameHome() {
             </Link>
           </button>
         )}
-        <form onSubmit={(e) => submitAnswer(userInput.join(""))}>
-          <button id="button" type="submit">
-            Solve
+        <form
+          id="enterContainer"
+          onSubmit={(e) => submitAnswer(userInput.join(""))}
+        >
+          <button id="enterButton" type="submit">
+            Enter
           </button>
         </form>
       </section>
-    </>
+    </article>
   );
 }
