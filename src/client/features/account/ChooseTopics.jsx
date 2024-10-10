@@ -59,12 +59,13 @@ export default function ChooseTopics() {
    */
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
-      <>
-        <h3 id="categoryName">{category.name}</h3>
+      <section className="categoryItemSection">
+        <h2 id="categoryName">{category.name}</h2>
         <ul id="checkBoxContainer">
           {category.Category_topics.map(({ topic }) => (
             <li key={topic.id}>
               <label id="topicsNames">
+                {topic.name}
                 <input
                   id="checkbox"
                   type="checkbox"
@@ -72,12 +73,11 @@ export default function ChooseTopics() {
                   checked={selectedTopics.includes(topic.id)}
                   onChange={(e) => onCheckboxChange(topic.id, e.target.checked)}
                 />
-                {topic.name}
               </label>
             </li>
           ))}
         </ul>
-      </>
+      </section>
     );
   }
 
