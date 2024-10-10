@@ -75,7 +75,7 @@ function TopicCard({ topic }) {
   };
 
   return (
-    <li>
+    <li className="topicCard">
       <p id="topicName">{topic?.name}</p>
       <form onSubmit={createQuiz}>
         <button id="playQuizButton">Play Quiz</button>

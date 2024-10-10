@@ -99,7 +99,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0rem 0rem 0rem 0rem;
+  margin: 0rem 0rem 2rem 0rem;
 }
 
 #chooseTopicsHeadline,
@@ -390,7 +390,7 @@ border: 2px solid #2082f1;
   #userStats {
     margin: 1rem;
   }
-  #userCard, #topPlayersCard {
+  #userCard, #topPlayersCard, .topicCard {
     width: 100%;
   }
   #changeTopicsButton, #continueQuizButton {
@@ -437,6 +437,13 @@ border: 2px solid #2082f1;
 #topicCard {
   display: flex;
   justify-content: center;
+}
+
+#yourTopicsCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 #pickQuizMessageSection {
