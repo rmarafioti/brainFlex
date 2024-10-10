@@ -94,25 +94,90 @@
 
 /* choose topics styling */
 
+.chooseTopicsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
 #chooseTopicsHeadline,
 #pickQuizHeadline {
-  color: rgb(248, 119, 54);
-  font-size: 2rem;
-  margin-left: 1rem;
-  text-align: left;
+  color: rgb(229, 83, 15);
+  font-size: 40px;
+}
+
+#categoryName {
+  color: #2082f1;
+  text-align: center;
+  font-size: 30px;
+}
+
+#topicsNames {
+  display: flex;
+  justify-content: space-between;
+  color: #3a5068;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5rem;
+  margin: 0rem 6rem 0rem 6rem;
 }
 
 #chooseTopicsTag,
-#pickQuizTag,
-#topicsNames {
-  color: #5e80a8;
+#pickQuizTag {
+  color: #3a5068;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
-  text-align: left;
-  margin-left: 1rem;
+  font-size: 30px;
+  text-align: center;
 }
 
-#categoryCard,
+.categoryItemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5e80a8;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  width: 480px;
+}
+
+#checkBoxContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+
+#checkbox {
+  margin-right: 1rem;
+}
+
+#submitTopicsButton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #2082f1;
+  border: 2px solid #2082f1;
+  padding: 1rem;
+  margin: 0.5rem 0rem 1.5rem 0rem;
+  border-radius: 10px;
+  width: 480px;
+  cursor: pointer;
+}
+
+#submitTopicsButton a:visited {
+  color: white;
+}
+
 #pickQuizCard {
   color: #5e80a8;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
@@ -125,8 +190,21 @@
   border-radius: 15px;
 }
 
-@media (min-width: 555px) {
-  #categoryCard,
+@media (max-width: 555px) {
+  .chooseTopicsPage, .categoryItemContainer, .categoryItemSection {
+    width: 100%;
+  }
+  #categoryCard, .categoryItemContainer, #buttonSection {
+    width: 90%;
+  }
+  #chooseTopicsHeadline {
+    text-align: center;
+  }
+  #topicsNames {
+    margin: 0rem 1rem 0rem 1rem;
+    
+  }
+  /*#categoryCard,
   #pickQuizCard {
     justify-content: center;
     max-width: 40%;
@@ -135,31 +213,9 @@
   #buttonSection {
     display: flex;
     justify-content: center;
-  }
+  }*/
 }
 
-#categoryName {
-  color: #5e80a8;
-}
-
-#checkBoxContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-#topicsNames {
-  display: block;
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-
-#checkbox {
-  margin-right: 1rem;
-}
-
-#submitTopicsButton {
-  margin-left: 1rem;
-}
 
 /*user stats styling*/
 
@@ -334,7 +390,7 @@ border: 2px solid #2082f1;
   #userStats {
     margin: 1rem;
   }
-  #userCard, #topPlayersCard {
+  #userCard, #topPlayersCard, .topicCard {
     width: 100%;
   }
   #changeTopicsButton, #continueQuizButton {
@@ -344,14 +400,50 @@ border: 2px solid #2082f1;
 
 /* pick quiz page styling */
 
-#pickQuizSection {
+.pickQuizContent {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: 1rem 0rem 4rem 0rem;
+}
+
+#pickQuizHeadline {
+  font-size: 40px;
+}
+
+.topic {
+  color: #2082f1;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2rem;
+}
+
+#question {
+  margin-bottom: 0rem;
+}
+
+#pickQuizSection {
+  color: #2082f1;
+  font-family: Arial, Helvetica, sans-serif;
+  filter: drop-shadow(0px 0px 0.1rem #62a3ee);
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  width: 480px;
 }
 
 #topicCard {
   display: flex;
   justify-content: center;
+}
+
+#yourTopicsCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 #pickQuizMessageSection {
@@ -368,6 +460,9 @@ border: 2px solid #2082f1;
 }
 
 @media (max-width: 555px) {
+   #pickQuizSection {
+    width: 90%;
+  }
   #homePageContainer {
     width: 100%;
   }
