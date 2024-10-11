@@ -18,7 +18,7 @@
   overflow: hidden;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
   box-sizing: border-box;
-  width:480px;
+  width: 480px;
 }
 #image {
   display: flex;
@@ -180,24 +180,42 @@
   margin-bottom: 2rem;
 }
 
+.scoreIncorrect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 1rem 4rem 1rem;
+}
 
+#correctAnswer {
+  color: rgb(229, 83, 15);
+  text-align: center;
+  margin-top: 1rem;
+}
+.correctAnswerWord {
+  color: #2082f1;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-#correctAnswer,
 #quizScore {
-  color: rgb(248, 119, 54);
-  text-align: left;
-  margin-left: 1.5rem;
+  color: #3a5068;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#answerInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 555px) {
-  #answerInformation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 1rem;
-  }
+ 
   #revealedLetter {
     line-height: 1.5rem;
   }
@@ -216,9 +234,6 @@
   }
 }
 
-#quizScore {
-  color: #5e80a8;
-}
 
 /* quiz styling */
 
