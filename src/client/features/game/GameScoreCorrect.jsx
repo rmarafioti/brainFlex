@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import React from "react";
 import { useGetMeQuery } from "../account/accountSlice";
-import {
-  useGetImageWordQuery,
-  useGetGameQuery,
-} from "./gameSlice";
+import { useGetImageWordQuery, useGetGameQuery } from "./gameSlice";
 
 import "./game.css";
 
@@ -21,10 +18,10 @@ const calculateScore = (currentquestion) => {
 };
 
 const isThereAQuiz = () => {
-  const {data: me} = useGetMeQuery();
+  const { data: me } = useGetMeQuery();
   let foundQuizToday = false;
-//isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
-let todaysQuiz = null;
+  //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
+  let todaysQuiz = null;
   //this function looks at all of a users quizzes, then for each of them takes the datetime of that quiz
   // and converts it to month date year format, then compares it to todays date in the same format
   // it then for each of the quizes if it finds a quiz, sets foundquiz today to true, and then after that sees if that quiz is completed.
@@ -44,9 +41,7 @@ let todaysQuiz = null;
   }
 
   return todaysQuiz;
-
-}
-
+};
 
 /**
  *
@@ -60,7 +55,7 @@ export default function GameScoreCorrect() {
   // do we need this? const [updateUser] = useUpdatedUserMutation();
 
   return (
-    <>
+    <article className="scoreIncorrect">
       <section id="imageContainer">
         <img id="image" src={imageandword?.image_url} />
       </section>
@@ -79,6 +74,6 @@ export default function GameScoreCorrect() {
           HOME
         </Link>
       </button>
-    </>
+    </article>
   );
 }

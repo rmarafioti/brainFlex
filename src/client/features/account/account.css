@@ -73,7 +73,7 @@
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 10px;
-  width: 300px;
+  width: 480px;
   cursor: pointer;
 }
 
@@ -202,7 +202,7 @@
   .chooseTopicsPage, .categoryItemContainer, .categoryItemSection {
     width: 100%;
   }
-  #categoryCard, .categoryItemContainer, #buttonSection {
+  #categoryCard, .categoryItemContainer, #buttonSection, #submitTopicsButton {
     width: 90%;
   }
   #chooseTopicsHeadline {
@@ -214,16 +214,6 @@
   #checkBoxContainer {
     margin: 0rem;
   }
-  /*#categoryCard,
-  #pickQuizCard {
-    justify-content: center;
-    max-width: 40%;
-    margin: 1rem auto;
-  }
-  #buttonSection {
-    display: flex;
-    justify-content: center;
-  }*/
 }
 
 
@@ -307,6 +297,10 @@ margin-bottom: 1rem;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 0.2rem;
+}
+
+#topicName {
+  font-size: 20px;
 }
 
 #continueQuizButton {
