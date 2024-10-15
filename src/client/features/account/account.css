@@ -306,8 +306,6 @@ margin-bottom: 1rem;
   cursor: pointer;
 }
 
-
-
 #playQuizButton {
   color:#3a5068;
   border: 2px solid #71adf1;
@@ -320,7 +318,6 @@ margin-bottom: 1rem;
   text-decoration: none;
   cursor: pointer;
 }
-
 
 #playQuizButton:hover, #continueQuizButton:hover {
 color: white;
@@ -345,8 +342,6 @@ border: 2px solid #2082f1;
   color: #2082f1
 }
 
-
-
 #changeTopicsButton,
 #continueQuizButton {
   border-radius: 10px;
@@ -360,9 +355,8 @@ border: 2px solid #2082f1;
 }
 
 #rankHeader {
-  margin-bottom: 1rem;
   font-size: 40px;
-  margin-top: 2rem;
+  margin: 2rem 0rem 1rem 0rem;
 }
 
 #displayRank {
@@ -390,10 +384,7 @@ border: 2px solid #2082f1;
   #userStats {
     margin: 1rem;
   }
-  #userCard, #topPlayersCard, .topicCard {
-    width: 100%;
-  }
-  #changeTopicsButton, #continueQuizButton {
+  #changeTopicsButton, #continueQuizButton, #userCard, #topPlayersCard, .topicCard {
   width: 100%;
 }
 }

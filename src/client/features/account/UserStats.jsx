@@ -71,7 +71,6 @@ function TopicCard({ topic }) {
         image_Word_Id: image_topic_id,
       });
       //found quiz today is if there is a quiz for that user that exists today
-
       //isfoundquizcompleted is if it finds a quiz for that user today, is that quiz completed or not
       //if there is a quiz that already exists for today, then this is the id of that quiz
       navigate(`/game/home/`);
@@ -116,7 +115,6 @@ function distanceToNextRank(userAggregateScore) {
         </>
       );
     }
-
     if (
       userAggregateScore >= rankRequirements[i] &&
       userAggregateScore < rankRequirements[i + 1]
