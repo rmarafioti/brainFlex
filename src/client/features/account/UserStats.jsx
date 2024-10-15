@@ -96,10 +96,10 @@ function TopicCard({ topic }) {
  */
 function UserScores({ user }) {
   return (
-    <ul>
-      <h3>{user?.name}</h3>
-      <li id="topUserScores">Score: {user?.aggregate_score}</li>
-    </ul>
+    <div>
+      <p>{user?.name}</p>
+      <p id="topUserScores">Score: {user?.aggregate_score}</p>
+    </div>
   );
 }
 
@@ -121,7 +121,7 @@ function distanceToNextRank(userAggregateScore) {
     ) {
       return (
         <>
-          <h3 id="rankHeader">Your Rank:</h3>
+          <h2 id="rankHeader">Your Rank:</h2>
           <p className="levelStyling">
             Experience: {userAggregateScore}/{rankRequirements[i + 1]}
           </p>
@@ -139,7 +139,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455594/Ranking/main-qimg-a0db46609f626689cceb06b6640a3f77-lq_mrvria.jpg"
-        ></img>
+          alt="image of a medal for master rank"
+        />
       </section>
     );
   }
@@ -150,7 +151,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455544/Ranking/supersonic-diamond-rank-icon-as-requested-v0-1sj9vx0855591_iwxktg.png"
-        ></img>
+          alt="image of a medal for diamond rank"
+        />
       </>
     );
   }
@@ -161,7 +163,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455526/Ranking/0c8df63e7f721ff427259481285a7e9c8bed3627_00_lzcl7s.jpg"
-        ></img>
+          alt="image of a medal for platinum rank"
+        />
       </>
     );
   }
@@ -172,7 +175,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455490/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_mq8fvp.jpg"
-        ></img>
+          alt="image of a medal for gold rank"
+        />
       </>
     );
   }
@@ -183,7 +187,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455473/Ranking/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8_cviqmi.jpg"
-        ></img>
+          alt="image of a medal for silver rank"
+        />
       </>
     );
   }
@@ -194,7 +199,8 @@ function displayRank(userAggregateScore) {
         <img
           className="rankImage"
           src="https://res.cloudinary.com/dzpne110u/image/upload/v1713455460/Ranking/flat_750x_075_f-pad_750x1000_f8f8f8_znl7sa.jpg"
-        ></img>
+          alt="image of a medal for bronze rank"
+        />
       </>
     );
   }
@@ -288,7 +294,7 @@ export default function UserStats() {
     } else {
       return (
         <div id="yourTopicsCard">
-          <h3 id="yourTopicsHeadline">Your Topics: </h3>
+          <h2 id="yourTopicsHeadline">Your Topics: </h2>
           <ul>
             {me?.user_topics?.map(({ Topics }) => (
               <TopicCard key={Topics?.id} topic={Topics} />
@@ -314,14 +320,14 @@ export default function UserStats() {
           </button>
         </div>
         <div id="topPlayersCard">
-          <h3 id="topPlayersHeadline">Top Players:</h3>
-          <ul id="topPlayers">
+          <h2 id="topPlayersHeadline">Top Players:</h2>
+          <div id="topPlayers">
             {users?.length > 0 &&
               [...users]
                 .sort((a, b) => b.aggregate_score - a.aggregate_score)
                 .slice(0, 3)
                 .map((user) => <UserScores key={user?.id} user={user} />)}
-          </ul>
+          </div>
         </div>
       </article>
     </>
