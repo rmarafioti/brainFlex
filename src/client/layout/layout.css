@@ -17,17 +17,17 @@
 
 #navBarSectionRight {
   display: flex;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .navLink {
-  color:  #2082f1;
+  color: #2082f1;
   border-radius: 10px;
   background-color: white;
-  padding: .5rem 1rem .5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   font-size: 22px;
   font-weight: bold;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   filter: drop-shadow(0px 0px 0.1rem #62a3ee);
   cursor: pointer;
 }
@@ -40,12 +40,6 @@
 .login {
   list-style-type: none;
 }
-
-/*@media (max-width: 555px) {
-#navBarSectionRight {
-  display: inline-block;
-}
-}*/
 
 /* footer styling */
 
@@ -69,12 +63,12 @@
 
 .footerNavElement,
 .footerLogin,
-.footerLoginElement, #howToPlay {
+.footerLoginElement,
+#howToPlay {
   color: white;
   font-size: 20px;
-  padding: 0rem .5rem 0rem .5rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  margin: 2rem 0rem 0.5rem 0rem;
   font-weight: bold;
 }
 
@@ -88,7 +82,6 @@
   list-style-type: none;
   margin: 0;
 }
-
 
 @media (max-width: 586px) {
   #footerNavElements {
