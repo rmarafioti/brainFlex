@@ -61,17 +61,16 @@ export default function Quiz() {
   };
 
   return (
-    <>
+    <article className="quizQuestionPage">
       <section id="questionSection">
         <div id="iconContainer">
           <p id="questionIcon">Q:</p>
         </div>
-        <div>
-          <h3 id="question">
-            {quiz?.questions[currentQuestionIndex].question.question}
-          </h3>
-        </div>
+        <h3 id="question">
+          {quiz?.questions[currentQuestionIndex].question.question}
+        </h3>
       </section>
+
       <section id="quizAnswersSection">
         <div>
           <ol id="questionAnswers">
@@ -127,13 +126,13 @@ export default function Quiz() {
         </div>
       </section>
       <section id="buttonSection">
-        <NavLink to="/game/home">
-          <button id="backHomeButton">Back To Game Home</button>
-        </NavLink>
-        <form onSubmit={pickAnswer}>
+        <form className="buttonQuizPage" onSubmit={pickAnswer}>
           <button id="submitAnswerButton">Submit Answer</button>
         </form>
+        <NavLink className="buttonQuizPage" to="/game/home">
+          <button id="backHomeButton">Back To Game Home</button>
+        </NavLink>
       </section>
-    </>
+    </article>
   );
 }

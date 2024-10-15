@@ -59,7 +59,7 @@ export default function QuizAnswer() {
     if (
       quiz?.questions[currentQuestionIndex].question.correct_answer === letter
     ) {
-      return <span className="answerIconCorrect">&#10003;</span>;
+      return <span className="answerIconCorrect">&#10003;correct answer</span>;
     } else {
       return <span className="answerIcon">&#10005;</span>;
     }
@@ -93,40 +93,38 @@ export default function QuizAnswer() {
   };
 
   return (
-    <>
+    <article className="quizAnswerPage">
       <section id="quizAnswersSection">
-        <div>
-          <ol id="questionAnswers">
-            <li>
-              <label className="questionAnswer" htmlFor="answerA">
-                {quiz?.questions[currentQuestionIndex].question.answer_a}
-                {compareAnswer("A")}
-                {yourAnswer("A")}
-              </label>
-            </li>
-            <li>
-              <label className="questionAnswer" htmlFor="answerA">
-                {quiz?.questions[currentQuestionIndex].question.answer_b}
-              </label>
-              {compareAnswer("B")}
-              {yourAnswer("B")}
-            </li>
-            <li>
-              <label className="questionAnswer" htmlFor="answerA">
-                {quiz?.questions[currentQuestionIndex].question.answer_c}
-              </label>
-              {compareAnswer("C")}
-              {yourAnswer("C")}
-            </li>
-            <li>
-              <label className="questionAnswer" htmlFor="answerA">
-                {quiz?.questions[currentQuestionIndex].question.answer_d}
-              </label>
-              {compareAnswer("D")}
-              {yourAnswer("D")}
-            </li>
-          </ol>
-        </div>
+        <ol id="questionAnswers">
+          <li>
+            <label className="questionAnswer" htmlFor="answerA">
+              {quiz?.questions[currentQuestionIndex].question.answer_a}
+              {compareAnswer("A")}
+              {yourAnswer("A")}
+            </label>
+          </li>
+          <li>
+            <label className="questionAnswer" htmlFor="answerA">
+              {quiz?.questions[currentQuestionIndex].question.answer_b}
+            </label>
+            {compareAnswer("B")}
+            {yourAnswer("B")}
+          </li>
+          <li>
+            <label className="questionAnswer" htmlFor="answerA">
+              {quiz?.questions[currentQuestionIndex].question.answer_c}
+            </label>
+            {compareAnswer("C")}
+            {yourAnswer("C")}
+          </li>
+          <li>
+            <label className="questionAnswer" htmlFor="answerA">
+              {quiz?.questions[currentQuestionIndex].question.answer_d}
+            </label>
+            {compareAnswer("D")}
+            {yourAnswer("D")}
+          </li>
+        </ol>
       </section>
       <section id="factSection">
         <div id="funFactContainer">
@@ -137,10 +135,10 @@ export default function QuizAnswer() {
         </h3>
       </section>
       <section id="buttonSection">
-        <form onSubmit={goBackIncreaseQuestion}>
+        <form className="buttonQuizPage" onSubmit={goBackIncreaseQuestion}>
           <button id="backHomeButtonAnswerPage">Back To Game Home</button>
         </form>
       </section>
-    </>
+    </article>
   );
 }

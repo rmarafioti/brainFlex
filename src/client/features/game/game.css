@@ -156,7 +156,6 @@
 #button, 
 #buttonGame,
 #submitAnswerButton,
-#backHomeButton,
 #backHomeButtonAnswerPage {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -168,6 +167,24 @@
   border-radius: 10px;
   width: 480px;
   cursor: pointer;
+}
+
+#backHomeButton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #2082f1;
+  background-color: white;
+  border: 2px solid #2082f1;
+  padding: 1rem;
+  margin: 0.5rem 0rem 1.5rem 0rem;
+  border-radius: 10px;
+  width: 480px;
+  cursor: pointer;
+}
+
+#backHomeButton:hover {
+  color: white;
+  background-color: #2082f1;
 }
 
 #link:visited {
@@ -235,14 +252,35 @@
 
 
 /* quiz styling */
+.quizQuestionPage, .quizAnswerPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 2rem 1rem;
+}
 
-#questionSection,
-#factSection,
 #quizAnswersSection {
   margin: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#factSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#questionSection {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  text-align: center;
 }
 
 #iconContainer {
@@ -255,18 +293,7 @@
   border-radius: 25% 10%;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
-}
-
-#funFactContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: linear-gradient(#c7d6f1, #71adf1);
-  border-radius: 25% 5%;
-  padding: 0.5rem;
-  padding-top: 0;
-  margin-right: 0rem;
-  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 #questionIcon {
@@ -277,15 +304,20 @@
 
 #question,
 #funFact {
-  color: #5e80a8;
+  color:#2082f1;
   margin-left: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  width: 600px
 }
 
 #questionAnswers {
-  color: #5e80a8;
-  font-size: 1.3rem;
-  margin-left: 1rem;
+  color:  #3a5068;
+  font-size: 24px;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -299,6 +331,7 @@
 #answerC,
 #answerD {
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .answerIcon,
@@ -316,19 +349,20 @@
 
 #buttonSection {
   display: flex;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 #funFactContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   background: linear-gradient(#c7d6f1, #71adf1);
   border-radius: 25% 5%;
   padding: 0.5rem;
   padding-top: 0;
   margin-right: 0rem;
   margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 #funFactIcon {
@@ -337,6 +371,11 @@
   padding: 0.2rem;
 }
 
-#backHomeButtonAnswerPage {
-  margin-left: 1rem;
+@media (max-width: 555px) {
+#buttonSection, .buttonQuizPage, #quizAnswerSection, #question, .quizAnswers, #factSection,  #funFact {
+  width: 100%;
 }
+#questionAnswers {
+  text-align: center;
+}
+  }
