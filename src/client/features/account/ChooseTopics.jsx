@@ -57,6 +57,7 @@ export default function ChooseTopics() {
    * @param {*} param0.selectedTopics
    * @returns the category from the database and it's corresponding topics for the logged in user to pick from.
    */
+
   function CategoryItem({ category, onCheckboxChange, selectedTopics }) {
     return (
       <section className="categoryItemSection">
