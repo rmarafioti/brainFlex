@@ -47,7 +47,6 @@
   margin-top: 0.5rem;
 }
 
-#submitTopicsButton,
 #playQuizButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -60,7 +59,7 @@
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
-.buttonHome {
+.buttonHome, #submitTopicsButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
