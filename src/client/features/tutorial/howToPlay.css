@@ -29,8 +29,7 @@
 .imageContainerTutorial {
   display: flex;
   justify-content: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
 }
 
 .tutorialImage {
@@ -53,10 +52,9 @@
   background-color: #2082f1;
   border: 2px solid #2082f1;
   padding: 1rem;
-  margin: 0.5rem 0rem 0.5rem 0rem;
+  margin: 2rem 0rem 0.5rem 0rem;
   border-radius: 10px;
   width: 300px;
-  margin-top: 2rem;
   cursor: pointer;
 }
 
@@ -73,10 +71,14 @@
 }
 
 @media (max-width: 555px) {
-  .howToPlaySection, .tutorialImage, .link, .buttonSectionTutorial {
+  .howToPlaySection,
+  .tutorialImage,
+  .link,
+  .buttonSectionTutorial {
     width: 100%;
   }
-  .howToPlayInstructions, .button {
+  .howToPlayInstructions,
+  .button {
     width: 90%;
   }
   .buttonSectionTutorial {

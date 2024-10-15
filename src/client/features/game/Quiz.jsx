@@ -45,7 +45,6 @@ export default function Quiz() {
     useUpdateProblemMutation();
   const { data: quiz } = useGetGameQuery(id);
   const currentQuestionIndex = quiz?.current_question - 1; // Adjusting for zero-based indexing
-  // do we need this? const [setNextQuestion] = useUpdateQuizQuestionUnsolvedMutation();
 
   /**
    *
