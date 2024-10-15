@@ -26,14 +26,6 @@
   height: auto;
 }
 
-@media (max-width: 555px) {
-  #imageContainer {
-    width:100%;
-    height: auto;
-  }
-
-}
-
 .blur-50 {
   filter: blur(50px);
 }
@@ -74,6 +66,7 @@
   justify-content: center;
   align-items: center;
 }
+
 #answerGridTitle {
   font-size: 30px;
   color: rgb(229, 83, 15);
@@ -101,18 +94,6 @@
   margin: 0.1rem;
   box-sizing: border-box;
   border-radius: 5px;
-}
-
-@media (max-width: 600px) {
-  #answerGridContainer {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  #userLetter,
-  #revealedLetter {
-    width: 25px;
-    height: 25px;
-  }
 }
 
 #revealedLetter {
@@ -232,6 +213,18 @@
 }
 
 @media (max-width: 555px) {
+  #imageContainer {
+    width:100%;
+    height: auto;
+  }
+  #answerGridContainer {
+    margin: 0rem 1rem 0rem 1rem;
+  }
+  #userLetter,
+  #revealedLetter {
+    width: 25px;
+    height: 25px;
+  }
   #revealedLetter {
     line-height: 1.5rem;
   }
@@ -249,7 +242,6 @@
     width: 100%;
   }
 }
-
 
 /* quiz styling */
 .quizQuestionPage, .quizAnswerPage {
