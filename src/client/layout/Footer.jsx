@@ -35,7 +35,7 @@ export default function Footer() {
             </Link>
           </p>
         )}
-        <p className="footerNavElement">
+        <div className="footerNavElement">
           {token ? (
             <p className="footerLoginElement">
               <a className="footerLogin" onClick={handleLogout}>
@@ -49,7 +49,7 @@ export default function Footer() {
               </NavLink>
             </p>
           )}
-        </p>
+        </div>
         <p className="footerNavElement">
           <Link to="howtoplay/1" id="howToPlay">
             how to play
