@@ -73,7 +73,7 @@
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 10px;
-  width: 300px;
+  width: 480px;
   cursor: pointer;
 }
 
@@ -202,7 +202,7 @@
   .chooseTopicsPage, .categoryItemContainer, .categoryItemSection {
     width: 100%;
   }
-  #categoryCard, .categoryItemContainer, #buttonSection {
+  #categoryCard, .categoryItemContainer, #buttonSection, #submitTopicsButton {
     width: 90%;
   }
   #chooseTopicsHeadline {
