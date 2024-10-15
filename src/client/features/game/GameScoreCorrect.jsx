@@ -32,11 +32,6 @@ const isThereAQuiz = () => {
     if (datechanged === Date().split(" ").slice(1, 4).join(" ")) {
       foundQuizToday = true;
       todaysQuiz = me?.quizzes[i].id;
-      // if (me?.quizzes[i].quiz_completed === true) {
-      //   isFoundQuizCompleted = true;
-      // } else {
-      //   false;
-      // }
     }
   }
 
@@ -52,7 +47,6 @@ export default function GameScoreCorrect() {
   const id = todaysQuiz;
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
-  // do we need this? const [updateUser] = useUpdatedUserMutation();
 
   return (
     <article className="scoreIncorrect">

@@ -35,7 +35,6 @@ export default function GameScoreIncorrect() {
   const id = todaysQuiz;
   const { data: quiz } = useGetGameQuery(id);
   const { data: imageandword } = useGetImageWordQuery(quiz?.image_Word_id);
-  // do we need this? const [updateUser] = useUpdatedUserMutation();
 
   return (
     <article className="scoreIncorrect">
