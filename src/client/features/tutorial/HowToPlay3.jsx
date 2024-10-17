@@ -10,7 +10,7 @@ export default function HowToPlay3() {
   return (
     <>
       <section className="howToPlaySection">
-        <h1 className="howToPlayHeader">✨ Step 3: </h1>
+        <h1 className="howToPlayHeader">Step 3: </h1>
         <h2 className="howToPlayTagline">Crack the Code!</h2>
         <p className="howToPlayInstructions">
           Think you’ve got it? Smash that solve button and spell out the secret

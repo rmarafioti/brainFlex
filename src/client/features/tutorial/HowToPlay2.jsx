@@ -10,7 +10,7 @@ export default function HowToPlay2() {
   return (
     <>
       <section className="howToPlaySection">
-        <h1 className="howToPlayHeader">🚀 Step 2: </h1>
+        <h1 className="howToPlayHeader">Step 2: </h1>
         <h2 className="howToPlayTagline">The Quest for Clues!</h2>
         <p className="howToPlayInstructions">
           Tackle 10 intriguing questions-answer as few or as many as you wish.
