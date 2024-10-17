@@ -59,7 +59,8 @@
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
-.buttonHome, #submitTopicsButton {
+.buttonHome,
+#submitTopicsButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -173,6 +174,7 @@
   border-radius: 10px;
   width: 480px;
   cursor: pointer;
+  text-align: center;
 }
 
 #submitTopicsButton a:visited {
@@ -191,12 +193,12 @@
 @media (max-width: 555px) {
   .chooseTopicsPage,
   .categoryItemContainer,
-  .categoryItemSection {
+  .categoryItemSection,
+  #buttonSection {
     width: 100%;
   }
   #categoryCard,
   .categoryItemContainer,
-  #buttonSection,
   #submitTopicsButton {
     width: 90%;
   }
@@ -341,6 +343,7 @@
   padding: 0.4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }

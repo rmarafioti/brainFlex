@@ -10,7 +10,7 @@ export default function HowToPlay1() {
   return (
     <>
       <section className="howToPlaySection">
-        <h1 className="howToPlayHeader">🌟 Step 1: </h1>
+        <h1 className="howToPlayHeader">Step 1: </h1>
         <h2 className="howToPlayTagline">Choose Your Adventure!</h2>
         <p className="howToPlayInstructions">
           Pick a topic and let the game begin. You’ll get a mysterious blurred

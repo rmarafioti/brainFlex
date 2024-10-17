@@ -51,11 +51,16 @@ export default function GameScoreCorrect() {
   return (
     <article className="scoreIncorrect">
       <section id="imageContainer">
-        <img id="image" src={imageandword?.image_url} />
+        <img
+          id="image"
+          src={imageandword?.image_url}
+          alt="the revealed image of the answer word"
+        />
       </section>
       <article id="answerInformation">
-        <div id="correctAnswer">
-          <h1>Correct! : {imageandword?.topic_word}</h1>
+        <div>
+          <h1 id="correctAnswer">Correct!:</h1>
+          <h2 className="correctAnswerWord">{imageandword?.topic_word}</h2>
         </div>
         <div>
           <p id="quizScore">
@@ -63,11 +68,9 @@ export default function GameScoreCorrect() {
           </p>
         </div>
       </article>
-      <button id="buttonGame">
-        <Link id="link" to="/account/">
-          HOME
-        </Link>
-      </button>
+      <Link id="buttonGame" className="link" to="/account/">
+        HOME
+      </Link>
     </article>
   );
 }

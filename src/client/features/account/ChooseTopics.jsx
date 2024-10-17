@@ -98,9 +98,9 @@ export default function ChooseTopics() {
         ))}
       </div>
       <div id="buttonSection">
-        <button id="submitTopicsButton" onClick={handleSumbit}>
-          <Link to={`/account/`}>Submit Topics</Link>
-        </button>
+        <Link id="submitTopicsButton" onClick={handleSumbit} to={`/account/`}>
+          Submit Topics
+        </Link>
       </div>
     </article>
   );
