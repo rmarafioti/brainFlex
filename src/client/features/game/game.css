@@ -221,7 +221,8 @@
 }
 
 @media (max-width: 555px) {
-  #imageContainer, #image {
+  #imageContainer,
+  #image {
     width: 100%;
     height: auto;
   }

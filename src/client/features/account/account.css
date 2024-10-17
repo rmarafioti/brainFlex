@@ -59,7 +59,8 @@
   margin: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
-.buttonHome, #submitTopicsButton {
+.buttonHome,
+#submitTopicsButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -192,7 +193,8 @@
 @media (max-width: 555px) {
   .chooseTopicsPage,
   .categoryItemContainer,
-  .categoryItemSection,  #buttonSection {
+  .categoryItemSection,
+  #buttonSection {
     width: 100%;
   }
   #categoryCard,
