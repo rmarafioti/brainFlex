@@ -191,12 +191,11 @@
 @media (max-width: 555px) {
   .chooseTopicsPage,
   .categoryItemContainer,
-  .categoryItemSection {
+  .categoryItemSection,  #buttonSection {
     width: 100%;
   }
   #categoryCard,
   .categoryItemContainer,
-  #buttonSection,
   #submitTopicsButton {
     width: 90%;
   }

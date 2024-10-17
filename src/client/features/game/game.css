@@ -22,7 +22,7 @@
 }
 #image {
   display: flex;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -213,7 +213,7 @@
 }
 
 @media (max-width: 555px) {
-  #imageContainer {
+  #imageContainer, #image {
     width: 100%;
     height: auto;
   }
@@ -351,7 +351,7 @@
   background: linear-gradient(#c7d6f1, #71adf1);
   border-radius: 25% 5%;
   padding: 0rem 0.5rem 0.5rem 0.5rem;
-  margin: 0rem 0rem 0rem 1rem;
+  margin: 0rem 0rem 1rem 1rem;
 }
 
 #funFactIcon {
@@ -363,6 +363,7 @@
 @media (max-width: 555px) {
   #buttonSection,
   .buttonQuizPage,
+  #submitAnswerButton,
   #quizAnswerSection,
   #question,
   .quizAnswers,

@@ -54,8 +54,9 @@ export default function GameScoreCorrect() {
         <img id="image" src={imageandword?.image_url} />
       </section>
       <article id="answerInformation">
-        <div id="correctAnswer">
-          <h1>Correct! : {imageandword?.topic_word}</h1>
+        <div>
+          <h1 id="correctAnswer">Correct!:</h1>
+          <h2 className="correctAnswerWord">{imageandword?.topic_word}</h2>
         </div>
         <div>
           <p id="quizScore">
