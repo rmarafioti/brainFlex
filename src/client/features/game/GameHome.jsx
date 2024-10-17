@@ -141,11 +141,14 @@ export default function GameHome() {
 
   return (
     <article className="gameHome">
-      <section id="currentQuestion">
-        Current Question: {currentQuestion}
-      </section>
+      <h1 id="currentQuestion">Current Question: {currentQuestion}</h1>
       <section id="imageContainer">
-        <img id="image" className={blurClass} src={image_word?.image_url} />
+        <img
+          id="image"
+          className={blurClass}
+          src={image_word?.image_url}
+          alt="answer image for current quiz"
+        />
       </section>
       <section>
         <p id="answerGridTitle">
@@ -168,6 +171,7 @@ export default function GameHome() {
                       maxLength="1"
                       key={index}
                       value={userInput[index]}
+                      aria-label="letter the user answers to solve the answer word"
                       onChange={(e) => handleInputChange(index, e.target.value)}
                     />
                   )}

@@ -173,6 +173,7 @@
   border-radius: 10px;
   width: 480px;
   cursor: pointer;
+  text-align: center;
 }
 
 #submitTopicsButton a:visited {
@@ -340,6 +341,7 @@
   padding: 0.4rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }

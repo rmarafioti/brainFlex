@@ -315,9 +315,10 @@ export default function UserStats() {
           <div>{distanceToNextRank(me?.aggregate_score)}</div>
           <div id="displayRank">{displayRank(me?.aggregate_score)}</div>
           {showCreateContinueFinished()}
-          <button id="changeTopicsButton">
-            <Link to={`/topics`}>Change Topics</Link>
-          </button>
+
+          <Link id="changeTopicsButton" to={`/topics`}>
+            Change Topics
+          </Link>
         </div>
         <div id="topPlayersCard">
           <h2 id="topPlayersHeadline">Top Players:</h2>
