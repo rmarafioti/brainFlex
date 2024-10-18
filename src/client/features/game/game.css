@@ -127,6 +127,7 @@
   margin: 0.5rem 0rem 1.5rem 0rem;
   border-radius: 10px;
   width: 480px;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -141,6 +142,7 @@
 #backHomeButtonAnswerPage {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  font-weight: bold;
   color: white;
   background-color: #2082f1;
   border: 2px solid #2082f1;
@@ -148,12 +150,14 @@
   margin: 0.5rem 0rem 1.5rem 0rem;
   border-radius: 10px;
   width: 480px;
+  text-align: center;
   cursor: pointer;
 }
 
 #backHomeButton {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  font-weight: bold;
   color: #2082f1;
   background-color: white;
   border: 2px solid #2082f1;
@@ -161,6 +165,7 @@
   margin: 0.5rem 0rem 1.5rem 0rem;
   border-radius: 10px;
   width: 480px;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -169,10 +174,17 @@
   background-color: #2082f1;
 }
 
-.link {
+.link, .enter {
   font-weight: bold;
   font-size: 20px;
 }
+
+.enter {
+  color: #2082f1;
+ background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .link:visited {
   color: white;
@@ -221,13 +233,15 @@
 }
 
 @media (max-width: 555px) {
+ 
   #imageContainer,
   #image {
     width: 100%;
     height: auto;
   }
-  #answerGridContainer {
-    margin: 0rem 1rem 0rem 1rem;
+  .answerGridSection {
+    display: flex;
+    flex-direction: column;
   }
   #userLetter,
   #revealedLetter {
@@ -243,12 +257,13 @@
     margin: auto;
     margin-bottom: 2rem;
   }
-  #button,
+  #button, .enter,
   #gameHomeButtons,
   #buttonGame,
   #submitAnswerButton,
   #backHomeButton,
-  #backHomeButtonAnswerPage {
+  #backHomeButtonAnswerPage,
+  #enterButton, .answerGridSection  {
     width: 100%;
   }
 }
@@ -345,7 +360,7 @@
 }
 
 .answerIconCorrect {
-  color: rgb(248, 119, 54);
+  color: rgb(229, 83, 15);
 }
 
 #buttonSection {

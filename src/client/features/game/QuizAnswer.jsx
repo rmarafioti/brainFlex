@@ -130,9 +130,9 @@ export default function QuizAnswer() {
         <div id="funFactContainer">
           <p id="funFactIcon">Fun Fact:</p>
         </div>
-        <h3 id="funFact">
+        <h1 id="funFact">
           {quiz?.questions[currentQuestionIndex].question.fun_fact}
-        </h3>
+        </h1>
       </section>
       <section id="buttonSection">
         <form className="buttonQuizPage" onSubmit={goBackIncreaseQuestion}>

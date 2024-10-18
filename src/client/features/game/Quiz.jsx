@@ -65,9 +65,9 @@ export default function Quiz() {
         <div id="iconContainer">
           <p id="questionIcon">Q:</p>
         </div>
-        <h3 id="question">
+        <h1 id="question">
           {quiz?.questions[currentQuestionIndex].question.question}
-        </h3>
+        </h1>
       </section>
 
       <section id="quizAnswersSection">

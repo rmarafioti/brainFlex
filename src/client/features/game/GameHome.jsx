@@ -150,7 +150,7 @@ export default function GameHome() {
           alt="answer image for current quiz"
         />
       </section>
-      <section>
+      <section className="answerGridSection">
         <p id="answerGridTitle">
           Fill in the empty letters and hit enter to solve
         </p>
@@ -183,22 +183,21 @@ export default function GameHome() {
       </section>
       <section id="gameHomeButtons">
         {!quiz?.quiz_completed && (
-          <button id="button">
-            <Link id="link" to={`/game/quiz`}>
-              {currentQuestion === 1
-                ? "Ready for Your First Question?"
-                : "Ready for Next Question?"}
-            </Link>
-          </button>
+          <Link className="link" id="button" to={`/game/quiz`}>
+            {currentQuestion === 1
+              ? "Ready for Your First Question?"
+              : "Ready for Next Question?"}
+          </Link>
         )}
-        <form
-          id="enterContainer"
-          onSubmit={(e) => submitAnswer(userInput.join(""))}
-        >
-          <button id="enterButton" type="submit">
+        <button className="enter" type="submit">
+          <form
+            id="backHomeButton"
+            type="submit"
+            onSubmit={(e) => submitAnswer(userInput.join(""))}
+          >
             Enter
-          </button>
-        </form>
+          </form>
+        </button>
       </section>
     </article>
   );
